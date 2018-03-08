@@ -1,5 +1,10 @@
 /* Stylesheet for Secret Agent Supply Inc project by Sarah Wynn March 2018 */
 
+
+#main-banner {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
+}
+
 /*
 
 https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/secret-agent-supply/resources/images/logo.png
