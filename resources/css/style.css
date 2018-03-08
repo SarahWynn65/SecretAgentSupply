@@ -1,20 +1,39 @@
 /* Stylesheet for Secret Agent Supply Inc project by Sarah Wynn March 2018 */
 
 
-#main-banner {
-  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
+html {
+  font-size: 18px;
+  font-family: Helvetica;
 }
 
-/*
+body {
+  color: white;
+  background-color: black;
+  width: 960px; /* site container */
+  /* z-index: 1; */
+}
 
-https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/secret-agent-supply/resources/images/logo.png
+#logo-banner {
+  display: flex;
+  align-items: center;
+}
 
-https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg
+#logo-banner img {
+  height: 1.5rem;
+  padding: 0.5rem;
+}
 
-https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/secret-agent-supply/resources/images/pen.png
+#logo-banner span {
+  font-size: 1rem;
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
+}
 
-https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/secret-agent-supply/resources/images/watch.png
+#main-banner {
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
+  height: 25rem;
+}
 
-https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/secret-agent-supply/resources/images/glasses.png
-
- */
+footer {
+margin: 40px;
+}
