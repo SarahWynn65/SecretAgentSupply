@@ -63,6 +63,23 @@ body {
 
 /* ----------------------------- */
 
+nav {
+  background-color: firebrick;
+  /* padding: 0.75rem; */
+}
+
+nav ul {
+  display: inline-flex;
+  width: 100%; /* Specify width so that justify-content can work. */
+  justify-content: space-around;
+}
+
+nav li {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+/* ----------------------------- */
 
 footer {
 margin: 40px;
