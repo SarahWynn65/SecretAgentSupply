@@ -12,6 +12,18 @@ body {
   width: 960px; /* ?need to use flex-basis and therefore display: flex; */
 }
 
+h2 {
+  font-size: 1rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
 /* ----------------------------- */
 
 #logo-banner {
@@ -49,19 +61,13 @@ body {
 }
 
 #main-banner h2 {
-  font-size: 1rem;
   padding-bottom: 0.25rem;
-}
-
-#main-banner h3 {
-  font-size: 2rem;
 }
 
 /* ----------------------------- */
 
 nav {
   background-color: firebrick;
-  /* padding: 0.75rem; */
 }
 
 nav ul {
@@ -85,9 +91,9 @@ nav li {
 }
 
 .feature {
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: flex-end; /* This keeps h4 at the bottom of the feature. */
+  display: inline-flex; /* inline-flex so that there can be more than on .feature on the line. */
+  flex-direction: column; /* This puts the image and heading in vertical alignment */
+  justify-content: flex-end; /* This keeps h4 at the bottom of the .feature box */
   margin-top: 3rem;
   margin-bottom: 3rem;
   border: 4px solid black;
@@ -117,20 +123,6 @@ nav li {
   padding: 0.5rem;
 }
 
-/* ----------------------------- */
-
-.contact-info {
-  display: inline-flex;
-  justify-content: space-between;
-  background-color: white;
-  width: inherit;
-}
-
-.contact-info h4 {
-  background-color: black;
-  width: 35%;
-}
-
 /*
 .container {
 width: 50%;
@@ -144,6 +136,33 @@ height: auto;
 display: block; / * This bit stops images trying to wrap with other elements. * /
 }
 */
+
+/* ----------------------------- */
+
+#contact-section {
+  display: flex; /* spans whole width of web page */
+  justify-content: space-between; /* contact items inside contact-section are at opposite ends of the flex-box */
+  background-color: white;
+  width: 100%; /* width is the same as enclosing <body> */
+  padding-bottom: 4rem; /* padding rather than margin so that background-color extends to edges */
+}
+
+.contact-item {
+  width: 35%;
+}
+
+.contact-item h4 {
+  background-color: black;
+  background-size: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+.contact-item span {
+  color: black;
+}
+
 
 /* ----------------------------- */
 
