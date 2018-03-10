@@ -7,11 +7,9 @@ html {
 }
 
 body {
-  /* display: flex;
-  flex-direction: column; */
   color: white;
   background-color: black;
-  /*flex-basis: 960px;*/ /* site container */
+  width: 960px; /* ?need to use flex-basis and therefore display: flex; */
 }
 
 /* ----------------------------- */
@@ -39,8 +37,6 @@ body {
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   background-color: grey; /* backup color */
   background-size: cover;
-  /* flex-basis: 25rem; */
-  /* overflow: hidden; */
 }
 
 #main-banner div {
@@ -81,6 +77,81 @@ nav li {
 
 /* ----------------------------- */
 
+#product-grid {
+  display: flex;
+  width: 960px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.feature {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-end; /* This keeps h4 at the bottom of the feature. */
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border: 4px solid black;
+  padding: 0;
+  width: 30%;
+  height: 15rem;
+}
+
+.feature img {
+  max-height: 9rem;
+  max-width: 70%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  /* margin-left: auto;
+  margin-right: auto; */
+
+  /* height: 9auto;
+  width: 9rem;
+  padding: 2rem; */
+  /* margin: 0; */
+}
+
+.feature h4 {
+  background-color: black;
+  background-size: 100%;
+  text-align: center; /* non-flexbox text alignment */
+  padding: 0.5rem;
+}
+
+/* ----------------------------- */
+
+.contact-info {
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: white;
+  width: inherit;
+}
+
+.contact-info h4 {
+  background-color: black;
+  width: 35%;
+}
+
+/*
+.container {
+width: 50%;
+height: 200px;
+overflow: hidden;
+}
+
+.container img {
+max-width: 100%;
+height: auto;
+display: block; / * This bit stops images trying to wrap with other elements. * /
+}
+*/
+
+/* ----------------------------- */
+
 footer {
-margin: 40px;
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  background-color: black;
+  justify-content: flex-start;
+  align-items: center;
 }
