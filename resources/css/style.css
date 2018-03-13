@@ -1,6 +1,5 @@
 /* Stylesheet for Secret Agent Supply Inc project by Sarah Wynn March 2018 */
 
-
 html {
   font-size: 18px;
   font-family: Helvetica;
@@ -8,8 +7,10 @@ html {
 
 body {
   color: white;
-  background-color: black;
-  width: 960px; /* ?need to use flex-basis and therefore display: flex; */
+  /* background-color: black; */
+  /* width: 960px; */
+  margin-left: auto; /* Left and right margins are set to auto so that the content will center horizontally. */
+  margin-right: auto;
 }
 
 h2 {
@@ -24,43 +25,55 @@ h4 {
   font-size: 1rem;
 }
 
+.site-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 /* ----------------------------- */
 
 #logo-banner {
-  display: flex;
-  align-items: center;
+  background-color: black;
 }
 
 #logo-banner img {
-  height: 1.5rem;
-  padding: 0.5rem;
+  vertical-align: middle; /* Aligns the middle of the image with the middle of the following text. */
+  height: 1.5rem; /* As per specs */
+  padding: 0.5rem; /* As per specs */
 }
 
 #logo-banner span {
   font-size: 1rem;
   padding-top: 0.66rem;
   padding-bottom: 0.66rem;
+  padding-left: 0.5rem; /* As per specs (when added to padding around image)*/
 }
 
 /* ----------------------------- */
 
 #main-banner {
-  display: flex;
+  /* display: flex; */
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   background-color: grey; /* backup color */
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 25rem;
 }
 
-#main-banner div {
-  font-weight: bold;
+#headline {
   background-color: black;
+  color: white;
   width: 20rem;
-  margin-top: 9rem;
-  padding: 2rem 3rem; /* Puts black space between the words and the motorbike picture. */
+  padding: 2rem 3rem;
+  position: relative;
+  top: 9rem;
+  font-weight: bold;
+  display: block;
   margin-bottom: 4.75rem; /* This puts space between the bottom of the title and the bottom of the motorbike image. */
 }
 
-#main-banner h2 {
+#headline h2 {
   padding-bottom: 0.25rem;
 }
 
@@ -147,10 +160,38 @@ nav li {
 /* ----------------------------- */
 
 footer {
-  display: flex;
+  /* display: flex; */
   height: 5rem;
   width: 100%;
   background-color: black;
-  justify-content: flex-start;
-  align-items: center;
+  /* justify-content: flex-start; */
+  /* align-items: center; */
+}
+
+footer div {
+  /* text-align: left; */
+  /* background-color: pink; */
+  padding-top: 2rem;
+}
+
+/* ----------------------------- */
+
+@media only screen and (max-width: 1024px) {
+  .feature {
+    width: 47%;
+  }
+  #picture3 {
+    display: none;
+  }
+  nav li {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+/*  The margin-left command SHOULD separate the main-banner div from the edge of
+the picture. */
+  /* #main-banner div {
+  margin-left: 15%;
+  }*/
 }
