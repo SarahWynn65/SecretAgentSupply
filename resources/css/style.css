@@ -7,8 +7,6 @@ html {
 
 body {
   color: white;
-  /* background-color: black; */
-  /* width: 960px; */
   margin-left: auto; /* Left and right margins are set to auto so that the content will center horizontally. */
   margin-right: auto;
 }
@@ -52,7 +50,6 @@ h4 {
 /* ----------------------------- */
 
 #main-banner {
-  /* display: flex; */
   background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
   background-color: grey; /* backup color */
   background-size: cover;
@@ -62,15 +59,15 @@ h4 {
 }
 
 #headline {
+  display: block;
   background-color: black;
-  color: white;
-  width: 20rem;
-  padding: 2rem 3rem;
   position: relative;
   top: 9rem;
-  font-weight: bold;
-  display: block;
   margin-bottom: 4.75rem; /* This puts space between the bottom of the title and the bottom of the motorbike image. */
+  padding: 2rem 3rem;
+  width: 20rem;
+  font-weight: bold;
+  color: white;
 }
 
 #headline h2 {
@@ -85,8 +82,8 @@ nav {
 
 nav ul {
   display: inline-flex;
-  width: 100%; /* Specify width so that justify-content can work. */
   justify-content: space-between;
+  width: 100%; /* Specify width so that justify-content can work. */
 }
 
 nav li {
@@ -98,9 +95,9 @@ nav li {
 
 #product-grid {
   display: flex; /* top level needs to span whole width of web page */
-  width: 100%; /* width is same as enclosing <body> */
   justify-content: space-between;
   background-color: white;
+  width: 100%; /* width is same as enclosing <body> */
 }
 
 .feature {
@@ -160,38 +157,129 @@ nav li {
 /* ----------------------------- */
 
 footer {
-  /* display: flex; */
   height: 5rem;
   width: 100%;
   background-color: black;
-  /* justify-content: flex-start; */
-  /* align-items: center; */
 }
 
 footer div {
-  /* text-align: left; */
-  /* background-color: pink; */
   padding-top: 2rem;
 }
 
 /* ----------------------------- */
 
-@media only screen and (max-width: 1024px) {
-  .feature {
-    width: 47%;
+/* Big screens */
+@media only screen and (min-width: 1025px) {
+  .large-menu {
+
   }
-  #picture3 {
+  .medium-menu {
     display: none;
   }
-  nav li {
+  .small-menu {
     display: none;
   }
 }
 
-@media only screen and (min-width: 960px) {
-/*  The margin-left command SHOULD separate the main-banner div from the edge of
-the picture. */
-  /* #main-banner div {
-  margin-left: 15%;
-  }*/
+/* Medium screens */
+@media only screen and (max-width: 1024px) and (min-width: 471px) {
+  html {
+    font-size: 16px;
+  }
+  .feature {
+    width: 47%;
+  }
+  .large-menu {
+    display: none;
+  }
+  .medium-menu {
+    justify-content: center;
+  }
+  .small-menu {
+    display: none;
+  }
+  #picture3 {
+    display: none;
+  }
+}
+
+/* Small screens */
+@media only screen and (max-width: 470px) {
+  #logo-banner img {
+    margin-left: 40%; /* NASTY, but it works */
+    margin-right: 40%;
+  }
+  #logo-banner span {
+    display: none; /* As per */
+  }
+
+  #main-banner {
+    height: 15rem; /* As per specs */
+  }
+  #headline {
+    margin-bottom: 0;
+    padding: 1rem 2rem; /* This puts space between bottom of motorbike picture and bottom of black area. */
+    width: 100%;
+    position: relative;
+    top: 10rem; /* As per specs */
+  }
+  #headline h2 {
+    font-size: 0.77rem;
+    line-height: 1.5rem; /* font-size is too small on its own to make background big enough to reach bottom of moto picture. */
+    font-weight: bold;
+  }
+  #headline h3 {
+    font-size: 1rem;
+    line-height: 1.5rem; /* font-size is too small on its own to make background big enough to reach bottom of moto picture. */
+    font-weight: bold;
+  }
+
+  .large-menu {
+    display: none;
+  }
+  .medium-menu {
+    display: none;
+  }
+  .small-menu {
+    justify-content: center;
+  }
+
+  .feature {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%; /* width is 90% of parent #product-grid */
+  }
+
+  .feature img {
+    margin: auto; /* This centers the image vertically and horizontally, allows the image to retain its original ratios, and has to be done in margin as padding doesn't have the auto option. */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    max-height: 9rem; /* This has to be 'max-height' rather than 'height' to allow wide images to shrink. */
+    max-width: 9rem;
+  }
+  #picture2, #picture3 {
+    display: none;
+  }
+
+  #contact-section {
+    display: flex; /* spans whole width of web page */
+    flex-wrap: wrap;
+    width: 100%; /* width is the same as enclosing <body> */
+    padding-bottom: 4rem; /* padding rather than margin so that background-color extends to edges */
+  }
+  .contact-item {
+    margin-top: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    line-height: 1.5rem; /* This gives a better distance between text and location block, above. */
+  }
+  footer {
+    height: 5rem;
+    width: 100%;
+    background-color: black;
+  }
+  footer div {
+    text-align: center;
+  }
 }
